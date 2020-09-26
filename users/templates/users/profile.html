@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="container">
+        <h2> {{ user_inatnce.username }}'s Profile</h2>
+        <br />
+
+        <div class="jumbotron">
+            <p>        
+                {{ user_inatnce.first_name }}
+            </p>
+            <p>
+                {{ user_inatnce.last_name }}
+            </p>
+            <p>
+                {{ user_inatnce.email }}            
+            </p>
+            <p>
+                {{ profile_details.dob }}
+            </p>
+            </p>
+            {{ profile_details.gender }}
+            </p>
+            <p>
+            <img src="{{profile_details.profile_picture.url}}" alt="user profile picture" style="max-height: 300px">
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

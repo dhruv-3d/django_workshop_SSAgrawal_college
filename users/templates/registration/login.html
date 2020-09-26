@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="jumbotron login">
+
+        <h2>Login</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Login">
+        </form>
+
+            
+        <a href="{% url 'index' %}">Back to Home</a>
+        <br />
+        Don't have an account
+        <a href="{% url 'register' %}">Register Here</a>
+
+    </div>
+
+{% endblock %}
